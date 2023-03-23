@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <script src="script.js"></script>
+   <link rel="stylesheet" href="style.css">
+   <title>Lbs to Kgs Calculator</title>
+</head>
+<body>
+   <h1>Weight Converter</h1>
+   <p>Enter a weight in lbs</p>
+   <input type="number" id="lbsInput">
+   <button class="myClass" id="lbsButton">Convert</button>
+   <h3 class="myClass">Output</h3>
+   <p id="output"></p>
+   <a href="otherpage.html">Link to otherpage</a>
+   <script>
+      function convertLbsToKgs() {
+         var lbs = document.getElementById('lbsInput').value;
+         console.log(lbs);
+         var kgs = lbs * 0.454
+         kgs = kgs.toFixed(2);
+         console.log(kgs)
+         document.getElementById("output").innerText = kgs + " kgs";
+      }
+      document.getElementById('lbsButton').addEventListener('click', convertLbsToKgs);
+   </script>
+</body>
+</html>
